@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="NetMov">
+        <meta name="author" content="jmanongko">
+        <title>Net-View</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <img src="asset/logo.png" style="width: ;"> --><span class="txt-white">Net</span><span class="txt-red">View</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: space-evenly;">
+                    <form class="d-flex" role="search">
+                        <div class="input-group">
+                            <input class="form-control search-input" type="search" placeholder="What do you want to watch?" aria-label="Search">
+                            <span class="input-group-text search-btn" id="basic-addon2" action=""><i class="bi bi-search"></i></span>
+                        </div>
+                    </form>
+
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalNotif"><i class="bi bi-bell-fill"></i></button>
+                    
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalSignin">Sign in</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <!-- BREADCRUMB
+            <nav class="sticky-top" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item txt-white">Home</a></li>
+                    <li class="breadcrumb-item txt-white">Dashboard</a></li>
+                </ol>
+            </nav> -->
+
+            <!-- CARROUSEL -->
+            <div id="carouselHero" class="carousel slide mt-24" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="asset/poster-1.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>THE ORANGE CUBE PROJECT</h5>
+                            <p>2022</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="asset/poster-2.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>JUMANJI</h5>
+                            <p>2022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- CARDS 1 -->
+            <div class="row" style="margin: 30px;">
+                <h2 class="txt-white mb-24" style="display: flex; justify-content: center;">POPULAR MOVIES</h2>
+                
+                <div class="col-6 col-sm-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Avengers Infinity War</h5>
+                            <p class="txt-white pos-center">2022</p>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Inception</h5>
+                            <p class="txt-white pos-center">2010</p>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Godzilla King of Monsters</h5>
+                            <p class="txt-white pos-center">2019</p>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-6.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Black Widow</h5>
+                            <p class="txt-white pos-center">2021</p>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARDS 2 -->
+            <div class="row" style="margin: 36px 10vw;">
+                <h2 class="txt-white mb-24" style="display: flex; justify-content: center;">Recently Played</h2>
+                
+                <div class="col-6 col-md-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Jurassic Park</h5>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch Again</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Star Wars</h5>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch Again</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-9.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Lion King</h5>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch Again</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-24">
+                    <div class="card bg-card" style="border: none;">
+                        <img src="asset/poster-4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title txt-white pos-center">Inception</h5>
+                            <a href="#" class="btn btn-danger pos-center" data-bs-toggle="modal" data-bs-target="#modalWatch">Watch Again</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="row bg-light" style="padding: 40px 10vw; background-color: #F2F2F2;">
+                <h2 style="display: flex; justify-content: center;">GIVE US A FEEDBACK</h2>
+                <div class="col-md-4">
+                    <div class="contact-container">
+                        <div class="mb-24 pos-center">
+                            <input class="input-email-usr" type="email" placeholder="Enter email address"/>
+                        </div>
+                        <div class="mb-24 pos-center">
+                            <textarea class="input-feedback-usr" type="text" placeholder="Input your Feedback"/></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-danger send-btn mb-24">Send Feedback</button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- MODAL -->
+        <!-- Modal Sign In-->
+        <div class="modal fade" id="modalSignin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background: none; border: none;">
+                    <div class="modal-body">
+                        <!-- Sign In Area -->
+                        <div class="signin-container">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div class="signin-title">Sign in</div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close" style="position: relative; bottom: 35px; left: 15px;"></button>
+                            </div>
+
+                            <div class="mb-24">
+                                <input class="input-email" type="email" placeholder="Enter email address"/>
+                            </div>
+                            <div class="mb-24">
+                                <input class="input-password" type="password" placeholder="Enter password"/>
+                            </div>
+
+                            <button type="button" class="btn btn-danger signin-btn mb-24">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Notification-->
+        <div class="modal fade" id="modalNotif" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background: none; border: none;">
+                    <div class="modal-body">
+                        <div class="signin-container">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div class="signin-title">Notification</div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close" style="position: relative; bottom: 35px; left: 15px;"></button>
+                            </div>
+
+                            <!-- Alert -->
+                            <div class="alert alert-success" role="alert">
+                                There is a new video added.
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Watch-->
+        <div class="modal fade" id="modalWatch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="background: none; border: none;">
+                    <div class="modal-body">
+                        <div class="watch-container">
+                            <div style="display: flex; justify-content: center;">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close" style="position: relative; bottom: 35px; left: 15px;"></button>
+                            </div>
+
+                            <!-- Video -->
+                            <div>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/HFT7ATLQQx8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

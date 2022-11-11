@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Work+Sans:wght@400;500&display=swap');
+	
+/*  ==========================================================================
+    Common Styles
+    ========================================================================== */
+
+/* COMMON */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Sans serif untuk Fallback value */
+    background-color: #212529;
+}
+
+nav {
+    background-color: #212529;
+    box-shadow: 0px 3px 6px rgb(255, 0, 0);
+}
+
+.txt-sm {
+    font-size: small;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.txt-white {
+    color: white;
+}
+
+
+.txt-red {
+    color: #dc3545;
+}
+
+/* SIGN-IN CONTAINER */
+.signin-container {
+    padding: 48px 24px;
+    width: 400px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.signin-title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 29px;
+
+    /* Brand/Indigo/Marine - #000032 */
+    color: #000032;
+
+    margin-bottom: 41px;
+}
+
+.input-email {
+    padding: 13px 20px;
+    width: 352px;
+    height: 45px;
+    
+    /* White */
+    background: #FFFFFF;
+    /* Brand/Indigo/Marine - #000032 */
+    border: 1.5px solid #000032;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* White/White 30 - #B3B3B3 */
+    color: #B3B3B3;
+}
+
+.input-password {
+    padding: 13px 20px;
+    width: 352px;
+    height: 45px;
+    
+    /* White */
+    background: #FFFFFF;
+    /* Brand/Indigo/Marine - #000032 */
+    border: 1.5px solid #000032;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* White/White 30 - #B3B3B3 */
+    color: #B3B3B3;
+}
+
+.signin-btn {
+    padding: 16px 24px;
+
+    width: 352px;
+    height: 54px;
+    border-radius: 8px;
+}
+
+/* WATCH CONTAINER */
+.watch-container {
+    padding: 80px 20px;
+    width: 600px;
+    object-fit: cover;
+    object-position: center;
+    
+    background: #212529;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+/* CONTACT CONTAINER */
+.contact-container {
+    padding: 40px 20px;
+    margin-left: 300px;
+    width: 500px;
+    height: 350px;
+    
+    background: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border: 5px solid black;
+    border-radius: 8px;
+}
+
+.input-email-usr {
+    padding: 13px 20px;
+    width: 800px;
+    height: 50px;
+    
+    /* White */
+    background: #FFFFFF;
+    /* Brand/Indigo/Marine - #000032 */
+    border: 1px solid #000032;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* White/White 30 - #B3B3B3 */
+    color: #B3B3B3;
+}
+
+.input-feedback-usr {
+    padding: 15px 20px;
+    width: 800px;
+    height: 100px;
+    
+    /* White */
+    background: #FFFFFF;
+    /* Brand/Indigo/Marine - #000032 */
+    border: 1px solid #000032;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* White/White 30 - #B3B3B3 */
+    color: #B3B3B3;
+}
+
+.send-btn {
+    padding: 15px 20px;
+    margin-left: 120px;
+
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+/* NAVBAR */
+.navbar-logo {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+}
+
+.d-flex {
+    width: 50vw;
+}
+
+@media screen and (max-width: 992px) {
+    .d-flex {
+        width: 95vw;
+     }
+}
+
+.search-input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.search-btn {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+
+/* BODY */
+/* Carousel */
+#carouselHero .carousel-item img {  
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 75vh;
+}
+  
+#carouselHero .carousel-item:before {
+    content: "";
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent, rgba(0,0,0,0.5)
+      );
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Card */
+.bg-card {
+    background-color: #474E68;
+}
+
+img {
+    opacity: 1.0;
+}
+  
+img:hover {
+    opacity: 0.5;
+}
+
+.pos-center{
+    display: flex; 
+    justify-content: center;
+} 
